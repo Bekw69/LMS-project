@@ -1,0 +1,61 @@
+{
+  "name": "enhanced-school-management-system",
+  "version": "2.0.0",
+  "description": "Enhanced MERN School Management System with Advanced Features",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm start",
+    "start": "npm run dev",
+    "install-server": "cd backend && npm install",
+    "install-client": "cd frontend && npm install",
+    "install-all": "npm run install-server && npm run install-client",
+    "build": "cd frontend && npm run build",
+    "build-server": "cd backend && npm run build",
+    "seed": "cd backend && npm run seed",
+    "logs": "cd backend && npm run logs",
+    "clean": "rimraf backend/node_modules frontend/node_modules backend/logs/*",
+    "clean-install": "npm run clean && npm run install-all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint backend/controllers backend/middleware backend/models",
+    "format": "prettier --write backend/**/*.js frontend/src/**/*.{js,jsx}",
+    "health-check": "curl http://localhost:5000/health",
+    "api-info": "curl http://localhost:5000/api-info"
+  },
+  "keywords": [
+    "school",
+    "management", 
+    "education",
+    "mern",
+    "nodejs",
+    "react",
+    "mongodb",
+    "express",
+    "jwt",
+    "socket.io",
+    "notifications",
+    "teacher-requests",
+    "enhanced"
+  ],
+  "author": "Enhanced School Management Team",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "rimraf": "^5.0.5",
+    "eslint": "^8.57.0",
+    "prettier": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-repo/enhanced-school-management.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-repo/enhanced-school-management/issues"
+  },
+  "homepage": "https://github.com/your-repo/enhanced-school-management#readme"
+} 
